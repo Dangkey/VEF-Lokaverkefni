@@ -13,7 +13,7 @@ for(var i=0;i<response.results.length;i++)
     var td1="<td>"+response.results[i]["dateOfShow"]+"</td>";
     var td2="<td>"+response.results[i]["eventDateName"]+"</td>";
     var td3="<td>"+response.results[i]["eventHallName"]+"</td></tr>";
-    var td4="<td>"+response.results[i]["imageSource"]+"</td>";
+    var td4="<td><img src='"+response.results[i]["imageSource"]+"'></td>";
     var td5="<td>"+response.results[i]["name"]+"</td>";
     var td6="<td>"+response.results[i]["userGroupName"]+"</td></tr>";
 
