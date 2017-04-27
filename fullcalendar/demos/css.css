@@ -1,0 +1,51 @@
+td,th{
+	border: 1px solid black;
+}
+div
+{
+	position: relative;
+	float: left;
+}
+body {
+  font: 14px/1.4 arial;
+}
+.imgWrap {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.imgDescription {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0.5;
+}
+.imgWrap:hover .imgDescription {
+  visibility: visible;
+  opacity: 1;
+}
+.imgWrap:hover{
+	opacity: 0.5;
+}
+body {
+    margin: 40px 10px;
+    padding: 0;
+    font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+    font-size: 14px;
+  }
+    
+  #loading {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  #calendar {
+    max-width: 900px;
+    margin: 0 auto;
+  }

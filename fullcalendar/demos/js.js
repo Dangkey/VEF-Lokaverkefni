@@ -26,10 +26,6 @@ for(var i=0;i<response.results.length;i++)
   }
 });
 
-$( function() {
-       $( "#tabs" ).tabs();
-     } );
-/*
 $(document).ready(function() {
   
     $('#calendar').fullCalendar({
@@ -59,4 +55,4 @@ $(document).ready(function() {
       
     });
     
-  });*/
+  });
