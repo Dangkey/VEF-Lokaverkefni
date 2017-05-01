@@ -1,26 +1,125 @@
-table, th, td {
-   border: 1px solid black;
+body {
+  margin: 0px 10px;
+  padding: 0;
+  font-family: 'Oswald', sans-serif;
+  background-color: #ddd;
+  font-size: 18px;
+  text-align: center;
 }
-div
-{
-	position: relative;
-	float: left;
-	margin: 5px;
+
+#tabs {
+  margin: auto;
+  max-width: 1280px;
+  background: rgb(221,221,221);
+  padding: 15px;
+  border: 0px;
 }
-#image
-{    
-    position:absolute;
-    left:0;
-    top:0;
+
+#events div {
+  position: relative;
+  float: left;
+  margin: 5px;
 }
-#text
-{
-    display: none;
-    z-index:100;
-    position:absolute;    
-    color:white;
-    font-size:24px;
-    font-weight:bold;
-    left:150px;
-    top:180px;
+
+div.gallery {
+  display: block;
+  margin: 5px;
+  width: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background-color: #fff;
+}
+
+.gallery div {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  background-color: rgb(255, 255, 255);
+  padding: 15px;
+  text-align: center;
+}
+
+div.caption {
+  position: relative;
+  height: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+  background-color: white;
+  background-image: url('content/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 100%;
+}
+
+
+/*.imgWrap {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.imgDescription {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0.5;
+}
+
+.imgWrap:hover .imgDescription {
+  visibility: visible;
+  opacity: 1;
+}
+
+.imgWrap:hover {
+  opacity: 0.5;
+}*/
+
+.toggler {
+  width: 500px;
+  height: 200px;
+}
+
+#button {
+  padding: .5em 1em;
+  text-decoration: none;
+}
+
+#effect {
+  width: 240px;
+  height: 170px;
+  padding: 0.4em;
+  position: absolute;
+  left: 250px;
+}
+
+#effect h3 {
+  margin: 0;
+  padding: 0.4em;
+  text-align: center;
+}
+
+#street-view {
+  height: 500px;
 }
