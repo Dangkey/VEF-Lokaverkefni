@@ -5,19 +5,17 @@
 	<title>Lokaverkefni</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css.css">
 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-
-
-	<script src="jquery-3.1.1.js" charset="utf-8"></script>
-	<script src="jquery-ui.js" charset="utf-8"></script>
+	<link rel="stylesheet" href="fullcalendar.css">
 	<link rel="stylesheet" href="jquery-ui.css">
-	<link rel="stylesheet" href="fullCalendar/resources/demos/style.css">
+	<link rel="stylesheet" type="text/css" href="css.css">
 
-	<!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+
+
+
+
+
 </head>
 
 <body>
@@ -28,32 +26,25 @@
 			<li><a href="#tabs-3">Map</a></li>
 		</ul>
 		<div id="tabs-1">
-			<div id="search">
-				<input type="text" placeholder="filter by search" id="filter-search" />
-			</div>
-			<div id="buttons">
-				<button class="active button" id="all">Show All</button>
-				<button class="button" id="1">Gamla Bíó</button>
-				<button class="button" id="2">Háskólabíó</button>
-				<button class="button" id="3">Spot Kópavogi</button>
-				<button class="button" id="4">Græni Hatturinn (Akureyri)</button>
-				<button class="button" id="5">Hljóðberg (Hannesarholt)</button>
-
-			</div>
 			<div id="events"></div>
 		</div>
 		<div id="tabs-2">
-		<div id="calendar">
-
-		</div>
+			<div id="calendar">
+			</div>
 		</div>
 		<div id="tabs-3">
 			<div id="street-view"></div>
 		</div>
 	</div>
 
+	<script src="jquery-3.1.1.js"></script>
+	<script src="jquery-ui.js"></script>
+	<script src="moment.js"></script>
+	<script src="fullcalendar.js"></script>
+	<script src='fullcalendar/locale/is.js'></script>
 	<script src="map.js"></script>
 	<script src="js.js"></script>
+
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADjdzPfQ9S-Bvyq7kLbQHc3Qwb9Cw2TkU&callback=initialize"></script>
 
 </body>

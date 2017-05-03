@@ -2,18 +2,44 @@ body {
   margin: 0px 10px;
   padding: 0;
   font-family: 'Oswald', sans-serif;
-  background-color: #ddd;
+  background-color: #ededed;
   font-size: 18px;
   text-align: center;
-}
 
+}
+ul{
+  border: 0px;
+}
 #tabs {
   margin: auto;
   max-width: 1280px;
-  background: rgb(221,221,221);
-  padding: 15px;
+  background: #ededed;
   border: 0px;
 }
+.ui-tabs .ui-tabs-nav {
+
+    display: flex;
+    background-color: #373737
+}
+.ui-tabs .ui-tabs-nav li {
+    flex: 1;
+    display: flex;
+    /* If placed in a small width sidebar or something like that disabling nowrap will fix the overflow issue */
+    white-space: normal;
+
+}
+
+.ui-tabs .ui-tabs-nav li a {
+    flex: 1;
+    /* If you want to align tab titles center */
+    text-align: center;
+
+    }
+.ui-tabs{
+  padding: 0px;
+  width: 100vw;
+}
+
 
 #events div {
   position: relative;
@@ -49,26 +75,10 @@ div.caption {
   padding-right: 15px;
 }
 
+td{
+  background-color: #ffffff;
 
-input[type=text] {
-  width: 130px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  font-size: 12px;
-  background-color: white;
-  background-image: url('content/searchicon.png');
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  padding: 12px 20px 12px 40px;
-  -webkit-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out;
 }
-
-input[type=text]:focus {
-  width: 100%;
-}
-
 
 /*.imgWrap {
   position: relative;
