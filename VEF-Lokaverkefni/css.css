@@ -1,0 +1,177 @@
+body {
+  margin: 0px 10px;
+  padding: 0;
+  font-family: 'Oswald', sans-serif;
+  background-color: #ededed;
+  font-size: 18px;
+  text-align: center;
+
+}
+ul{
+  border: 0px;
+}
+#tabs {
+  margin: auto;
+  max-width: 1280px;
+  background: #ededed;
+  border: 0px;
+}
+.ui-tabs .ui-tabs-nav {
+
+    display: flex;
+    background-color: #373737
+}
+.ui-tabs .ui-tabs-nav li {
+    flex: 1;
+    display: flex;
+    /* If placed in a small width sidebar or something like that disabling nowrap will fix the overflow issue */
+    white-space: normal;
+
+}
+
+.ui-tabs .ui-tabs-nav li a {
+    flex: 1;
+    /* If you want to align tab titles center */
+    text-align: center;
+
+    }
+.ui-tabs{
+  padding: 0px;
+  width: 100vw;
+}
+
+
+#events div {
+  position: relative;
+  float: left;
+  margin: 5px;
+}
+
+div.gallery {
+  display: block;
+  margin: 5px;
+  width: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background-color: #fff;
+}
+
+.gallery div {
+  width: 100%;
+  height: auto;
+}
+
+.gallery:hover span.text-content {
+  opacity: 1;
+}
+.imgdiv {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.img-div li {
+  display: inline-block;
+  height: 150px;
+  margin: 0 1em 1em 0;
+  position: relative;
+  width: 0;
+}
+
+
+span.text-content span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+span.text-content {
+  background: rgba(0,0,0,0);
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  color: white;
+}
+
+ul.img-list li:hover span.text-content {
+  opacity: 1;
+}
+
+div.desc {
+  background-color: rgb(255, 255, 255);
+  padding: 15px;
+  text-align: center;
+}
+
+div.caption {
+  position: relative;
+  height: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+td{
+  background-color: #ffffff;
+
+}
+
+/*.imgWrap {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.imgDescription {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0.5;
+}
+
+.imgWrap:hover .imgDescription {
+  visibility: visible;
+  opacity: 1;
+}
+
+.imgWrap:hover {
+  opacity: 0.5;
+}*/
+
+.toggler {
+  width: 500px;
+  height: 200px;
+}
+
+#button {
+  padding: .5em 1em;
+  text-decoration: none;
+}
+
+#effect {
+  width: 240px;
+  height: 170px;
+  padding: 0.4em;
+  position: absolute;
+  left: 250px;
+}
+
+#effect h3 {
+  margin: 0;
+  padding: 0.4em;
+  text-align: center;
+}
+
+#street-view {
+  height: 500px;
+}
