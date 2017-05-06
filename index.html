@@ -1,42 +1,46 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Lokaverkefni</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">		
-		<link rel="stylesheet" type="text/css" href="css.css">		
-		
-		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  		<link rel="stylesheet" href="/resources/demos/style.css">
-  		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
- 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-  		
-	</head>
+<head>
+	<title>Lokaverkefni</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link rel="stylesheet" href="fullcalendar.css">
+	<link rel="stylesheet" href="jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
 
-
-
-	<body>
+<body>
 	<div id="tabs">
-  <ul>
-    <li><a href="#tabs-1">Myndir</a></li>
-    <li><a href="#tabs-2">Calendar</a></li>
-    <li><a href="#tabs-3">Map</a></li>
-  </ul>
-  <div id="tabs-1">
-    <div id="test"></div>
-  </div>
-  <div id="tabs-2">
-  
-  </div>
-  <div id="tabs-3">
-    <div id="street-view"></div>
-  </div>
-</div>
-	
-	<script src="map.js"></script>
-	<script src="js.js"></script>	
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADjdzPfQ9S-Bvyq7kLbQHc3Qwb9Cw2TkU&callback=initialize"></script>
+		<ul>
+			<li><a href="#tabs-1">Myndir</a></li>
+			<li><a href="#tabs-2">Calendar</a></li>
+			<li><a href="#tabs-3">Map</a></li>
+		</ul>
+		<div id="tabs-1">
+			<div id="events"></div>
+		</div>
+		<div id="tabs-2">
+			<div id="calendar">
+			</div>
+		</div>
+		<div id="tabs-3">
+			<div id="map"></div>
+		</div>
+	</div>
 
-	</body>
+	<script src="jquery-3.1.1.js"></script>
+	<script src="jquery-ui.js"></script>
+	<script src="moment.js"></script>
+	<script src="fullcalendar.js"></script>
+	<script src='fullcalendar/locale/is.js'></script>
+	<script src="map.js"></script>
+	<script src="js.js"></script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1XPVCfGhXOHbdRSEsgrCKuX4DwqQTWVo&callback=initMap">
+	</script>
+
+</body>
+
 </html>
