@@ -1,71 +1,45 @@
 /* Function til að ná í gögn frá midi.is Api og setja það í divs sem sýnir mynd og nafn*/
-var arrays = [];
 var datearray = [];
 $.ajax({
   url: 'http://apis.is/concerts',
   type: 'GET',
   dataType: 'json',
-  success: function (response) {
+  success: function(response) {
 
-    var tagged = {};
-    var gamlabio = [];
-    var haskolabio = [];
-    var akureyri = [];
-    var hannesarholt = [];
-    var spot = [];
-    var hotelork = [];
+
+
     console.log(response.results);
     var tbl = $("<table/>").attr("id", "mytable");
     $("#events").append(tbl);
-    $.each(response.results , function() {
+    $.each(response.results, function() {
+      moment.locale('is');
+      var day = moment(this.dateOfShow);
       var divop = "<div id='imgdiv'>";
       var td1 = "<div>" + this.dateOfShow + "</div> ";
       var td2 = "<div>" + this.name + "</div>";
       var td3 = "<div>" + this.eventHallName + "</div>";
-      var td4 = "<div class='gallery' data-tags='" + this.eventHallName + "' alt='" + this.eventDateName + "'><img src='" + this.imageSource + "'></img><p class='desc'>" + this.eventDateName + "</p>";
+      var td4 = "<div class='gallery' data-tags='" + this.eventHallName + "' alt='" + this.eventDateName + "'><img src='" + this.imageSource + "'></img><p class='desc'>" + this.eventDateName + '<br>' + this.eventHallName + '<br>' + moment(day).format('Do MMMM YYYY') + "</p>";
       var td5 = "<div>" + this.userGroupName + "</div>";
       var divlok = "</div>";
 
-
-      if (this.eventHallName.includes("Gamla")) {
-        gamlabio.push(this);
-      }
-      else if (this.eventHallName.includes("Háskóla")) {
-        haskolabio.push(this);
-      }
-      else if (this.eventHallName.includes("Kópavogi")) {
-        spot.push(this);
-      }
-      else if (this.eventHallName.includes("Akureyri")) {
-        akureyri.push(this);
-      }
-      else if (this.eventHallName.includes("Hannesarholt")) {
-        hannesarholt.push(this);
-      }
-      else if (this.eventHallName.includes("Örk")) {
-        hotelork.push(this);
-      }
-
       $("#mytable").append(divop + td4 + divlok);
 
-      moment.locale('is');
-      var day = moment(this.dateOfShow);
+
       var event = {
         title: "" + this.eventDateName + "",
-         start : day,
-         allDay: false,
+        start: day,
+        allDay: false,
       };
-      $('#calendar').fullCalendar('renderEvent',event,true);
-
-
-
       datearray.push(day);
+
+
+
+
+
+      $('#calendar').fullCalendar('renderEvent', event, true);
+
+
     });
-
-    arrays.push(response.results,gamlabio,haskolabio,spot,akureyri,hannesarholt,hotelork);
-    console.log(datearray);
-    console.log(moment().format('LLLL'));
-
 
   }
 });
@@ -74,62 +48,111 @@ $.ajax({
 
 $(document).ready(function() {
 
-    // page is now ready, initialize the calendar...
 
-    $('#calendar').fullCalendar({
-      header :{
-        left: 'prev,next today',
-        center: 'title',
-        right: 'month,agendaWeek,agendaDay,listWeek'
-      },
-      height: parent,
-      locale: 'is',
-      allDaySlot: false,
-      navLinks: true,
+  $('#calendar').fullCalendar({
+    header: {
+      left: 'prev,next today',
+      center: 'title',
+      right: 'month,agendaWeek,agendaDay,listWeek'
+    },
+    height: parent,
+    locale: 'is',
+    allDaySlot: false,
+    navLinks: true,
+    defaultView: 'listWeek'
 
 
-        // put your options and callbacks here
-    });    
 
-});
 
-$(function() {
-  $("#tabs").tabs({
-    show: function(event, ui) {
-        $('#calendar').fullCalendar('render');
-    }
   });
+
 });
 
 
 
-/*$(document).ready(function() {
 
-    $('#calendar').fullCalendar({
 
-      header: {
-        left: 'prev,next today',
-        center: 'title',
-        right: 'month,listYear'
-      },
+function initMap() {
+  mapOptions = {
+    zoom: 6,
+    center: new google.maps.LatLng(64.914438, -18.2557869),
+    mapTypeId: 'roadmap'
+  };
 
-      displayEventTime: false, // don't show the time column in list view
+  map = new google.maps.Map(document.getElementById('map'), mapOptions);
+  var markers = [
+    ['Háskólabíó, Reykjavík', 64.140366, -21.954583],
+    ['Gamlabíó, Reykjavík', 64.146996, -21.933359],
+    ['Hannesarholt, Reykjavík', 64.144256, -21.935549],
+    ['Spot, Kópavogi', 64.100077, -21.876811],
+    ['Hótel Örk, Hveragerði', 63.996944, -21.192109],
+    ['Hlégarður, Mosfellsbær', 64.168054, -21.690595],
+    ['Kaffi Rauðka, Siglufjörður', 66.149292, -18.909037],
+    ['Græni Hatturinn, Akureyri', 65.681356, -18.089589],
 
-      googleCalendarApiKey: 'AIzaSyB4HaFwZgQjw1SbZR5cFiSxdOV-LcJ74Ig',
+  ];
 
-      // US Holidays
-      events: 'en.usa#holiday@group.v.calendar.google.com',
+  var infoWindowContent = [
+    ['<div class="info_content">' +
+      '<h3>Háskóla Bíó</h3>' +
+      '</div>'
+    ],
+    ['<div class="info_content">' +
+      '<h3>Gamlabíó</h3>' +
+      '</div>'
+    ],
+    ['<div class="info_content">' +
+      '<h3>Hannesarholt</h3>' +
+      '</div>'
+    ],
+    ['<div class="info_content">' +
+      '<h3>Spot</h3>' +
+      '</div>'
+    ],
+    ['<div class="info_content">' +
+      '<h3>Hótel Örk</h3>' +
+      '</div>'
+    ],
+    ['<div class="info_content">' +
+      '<h3>Hlégarður</h3>' +
+      '</div>'
+    ],
+    ['<div class="info_content">' +
+      '<h3>Kaffi Rauðka</h3>' +
+      '</div>'
+    ],
+    ['<div class="info_content">' +
+      '<h3>Græni Hatturinn</h3>' +
+      '</div>'
+    ]
+  ];
+  var infoWindow = new google.maps.InfoWindow(),
+    marker, i;
 
-      eventClick: function(event) {
-        // opens events in a popup window
-        window.open(event.url, 'gcalevent', 'width=700,height=600');
-        return false;
-      },
-
-      loading: function(bool) {
-        $('#loading').toggle(bool);
-      }
-
+  for (i = 0; i < markers.length; i++) {
+    var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
+    marker = new google.maps.Marker({
+      position: position,
+      map: map,
+      title: markers[i][0]
     });
+    google.maps.event.addListener(marker, 'click', (function(marker, i) {
+      return function() {
+        infoWindow.setContent(infoWindowContent[i][0]);
+        infoWindow.open(map, marker);
+        map.panTo(marker.getPosition());
+            map.setZoom(15);
+            map.setCenter(marker.getPosition());
 
-  });*/
+      };
+
+    })(marker, i));
+
+  }
+}
+jQuery('#tabs, #map').tabs({
+  activate: function(event, ui) {
+    google.maps.event.trigger(map, 'resize');
+    map.setCenter(mapOptions.center);
+  }
+});
