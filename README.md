@@ -4,7 +4,7 @@ Lokaverkefnið í Vef frá Hilmari og Elasi
 <strong>Hilmar</strong>:
 JSON gögn og AJAX notkun með APIs.
 Að umbreyta JSON í objecta í fylki.
-Filtering í flokka. Tabs
+Filtering í flokka. Tabs. Dagsetning og Dagatal.
 <br>
 <strong>Elas</strong>:
 Birting á gögnum. (nafn, mynd, staðsetning og dagsetning),
