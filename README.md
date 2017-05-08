@@ -2,16 +2,16 @@
 Lokaverkefnið í Vef frá Hilmari og Elasi
 
 <strong>Hilmar</strong>:
-JSON gögn og AJAX notkun með APIs.
-Að umbreyta JSON í objecta í fylki.
-Dagsetning og Dagatal.
-Kort,
+JSON gögn og AJAX notkun með APIs.<br>
+Að umbreyta JSON í objecta í fylki.<br>
+Dagsetning og Dagatal.<br>
+Kort,<br>
 <br>
 <strong>Elas</strong>:
-Birting á gögnum. (nafn, mynd, staðsetning og dagsetning),
-Íslensk dagsetning,
-Viðmót og framsetning á vefappi.
-Tabs. 
+Birting á gögnum. (nafn, mynd, staðsetning og dagsetning),<br>
+Íslensk dagsetning,<br>
+Viðmót og framsetning á vefappi.<br>
+Tabs. <br>
 
 <a href="http://tsuts.tskoli.is/2t/2308992829/4.onn/vef/lokaverkefni/index.html">Linkur að síðunni</a>
 
