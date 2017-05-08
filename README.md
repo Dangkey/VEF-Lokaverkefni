@@ -4,12 +4,12 @@ Lokaverkefnið í Vef frá Hilmari og Elasi
 <strong>Hilmar</strong>:
 JSON gögn og AJAX notkun með APIs.<br>
 Að umbreyta JSON í objecta í fylki.<br>
-Dagsetning og Dagatal.<br>
+Íslensk dagsetning.<br>
 Kort,<br>
 <br>
 <strong>Elas</strong>:
 Birting á gögnum. (nafn, mynd, staðsetning og dagsetning),<br>
-Íslensk dagsetning,<br>
+Dagsetning og Dagatal<br>
 Viðmót og framsetning á vefappi.<br>
 Tabs. <br>
 
